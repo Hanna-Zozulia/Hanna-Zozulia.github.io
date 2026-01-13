@@ -1,0 +1,3 @@
+[submodule "projects/Todo"]
+	path = projects/Todo
+	url = https://github.com/Hanna-Zozulia/Todo.git
