@@ -1,0 +1,506 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  user-select: none;       /* запрет выделения текста */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.bradcam_area {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0;
+  padding: 204px 0 193px;
+}
+
+.bradcam_bg_1 { 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/banner.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    width: 100%;
+    text-align: center;
+
+}
+
+.bradcam_area h3 {
+  font-size: 80px;
+  color: #fff;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.bradcam_area.bradcam_area2 h3 {
+  font-size: 46px;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  gap: 20px;
+  max-width: 1280px;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-xl-6,
+.col-lg-6,
+.col-md-6,
+.col-xl-10,
+.col-lg-10,
+.col-xl-12,
+.col-6,
+.col-md-3,
+.col-lg-8,
+.col-12,
+.col-sm-6,
+.col-lg-4 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-6 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+@media (min-width:576px) {
+  .col-sm-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+.col-12 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.col-lg-8 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 66.666667%;
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  color: #001D38;
+}
+
+.gallery_area {
+  background: #12023b;
+  padding: 50px 0; 
+}
+
+.portfolio_list {
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.single_gallery {
+  padding: 20px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.thumba,
+.thumb {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.thumb:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.thumba,
+.thumb img { 
+  width: 100%; 
+  height: 600px;
+}
+
+.thumb a.with-link::after {
+  content: "Перейти на сайт";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.thumb a.with-link:hover::after {
+  opacity: 1;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.track {
+  display: flex;
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.track > * {
+  min-width: 100%;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.track img {
+  max-width: auto;
+  max-height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.arrows {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #333;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.arrow:hover {
+  background: #DB9A64;
+}
+
+.arrow-up {
+  position: fixed;
+  right: 70px;
+  bottom: 30px;
+  font-size: 40px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  transform: rotate(-90deg); 
+}
+
+.arrow-up:hover {
+  transform: rotate(-90deg) scale(1.2);
+  color: #DB9A64;      
+}
+
+.with-link::after {
+  content: "Перейти на сайт";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.with-link:hover::after {
+  opacity: 1;
+}
+
+.gallery_heading a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.gallery_heading a:hover {
+  color: #DB9A64 !important;
+}
+
+.footer {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/banner.jpg) center center / cover no-repeat;
+  background-attachment: fixed;
+}
+
+.footer_top {
+  padding: 75px 0 100px;
+}
+
+.section_title h3 {
+  font-size: 36px;
+  font-weight: 400;
+  color: #fff;
+  position: relative;
+  z-index: 0;
+  padding-bottom: 0px;
+}
+
+.contact-section {
+  margin: 20px;
+}
+
+.container .contact-title {
+  font-size: 27px;
+  font-weight: 600;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: #DB9A64;
+}
+
+.contact {
+  background-color: #fff;
+  display: flex;
+    
+}
+
+.form-contact button {
+  margin-bottom: 30px;
+}
+
+.form-contact .form-control {
+  width: 100%;
+  margin-bottom: 30px;
+  border: 1px solid #e5e6e9;
+  border-radius: 0px;
+  height: 48px;
+  padding-left: 18px;
+  font-size: 16px;
+  background: transparent;
+  font-family: 'Arial', sans-serif;
+}
+
+.form-contact .form-control:focus {
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+  color: #fff; 
+}
+
+.form-contact .form-control::placeholder {
+  color: #eceef1;
+  opacity: 1; 
+}
+
+.form-contact .form-control input {
+  color: #fff;
+}
+
+
+.form-contact textarea.form-control  {
+  border-radius: 0px;
+  font-size: 16px;
+  height: 150px ;
+  min-height: 50px;
+  max-height: 500px;
+  font-family: 'Arial', sans-serif;       
+  resize: vertical; 
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group textarea[name="message"] {
+  color: #fff;
+}
+
+.contact-info {
+  margin-top: 50px;
+  padding: 0px 50px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-info__icon {
+  margin-right: 20px;
+}
+
+.contact-info__icon i {
+  color: #8f9195;
+  font-size: 27px;
+}
+
+.contact-info .media-body p {
+  margin: auto;
+  font-size: 16px;
+  color: #8a8a8a;
+}
+
+.contact-info .media-body p a{
+  color: #8a8a8a;
+  text-decoration: none; 
+  transition: color 0.3s; 
+}
+
+.contact-info .media-body p a:hover {
+  color: #DB9A64 !important; 
+}
+
+.boxed-btn {
+  background: #fff;
+  color: #131313;
+  display: inline-block;
+  padding: 18px 44px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  border: 0;
+  border: 1px solid #DB9A64;
+  letter-spacing: 3px;
+  text-align: center;
+  color: #DB9A64 !important;
+  text-transform: uppercase;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.boxed-btn:hover {
+  background: #DB9A64;
+  color: #fff !important;
+  border: 1px solid #DB9A64;
+}
+
+.boxed-btn:focus {
+  outline: none;
+}
+
+button {
+  color: #1F1F1F;
+  outline: medium none;
+}
+
+.single_link {
+  border: 1px solid #7A5444;
+  padding: 25px 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.py-4 {
+  padding-top: 1.5rem!important
+}
+
+.py-4 {
+  padding-bottom: 1.5rem!important
+}
+
+.single_link:hover { 
+  transform: translateY(-4px); 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  background: #CCAD85; 
+  border-color: #CCAD85; 
+  color: #fff; 
+}
+
+.single_link a i { 
+  color: #DB9A64; 
+  font-size: 20px; 
+  transition: color 0.3s ease; 
+  
+}
+
+.single_link a {
+  text-decoration: none;
+}
+
+.single_link span { 
+  color: #fff; 
+  font-size: 24px; 
+  font-weight: 400; 
+}
+
+.copy-right_text { 
+  padding-bottom: 30px; 
+}
+
+.copy_right { 
+  font-size: 14px; 
+  color: #919191; 
+  font-weight: 500; 
+  margin-bottom: 0; 
+  text-align: center;
+}
+
+.copy_right a { 
+  color: #DB9A64; 
+}
+
+@media (max-width: 576px) {
+  .col-sm-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

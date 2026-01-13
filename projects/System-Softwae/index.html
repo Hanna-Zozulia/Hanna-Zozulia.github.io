@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Explorer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>System or Application Software?</h1>
+        <p>Click a card to learn, or start the test.</p>
+        
+        <!-- Learning mode container -->
+        <div id="card-container" class="card-container"></div>
+        
+        <div class="btn">
+            <button id="start-test-btn">
+                <i class="bi bi-skip-start"></i> Start
+            </button>
+            <button class="shuffle-btn" id="shuffle-btn" title="Shuffle">
+                <i class="bi bi-shuffle"></i> Shuffle
+            </button>
+        </div>
+
+        <!-- Test mode container -->
+        <div id="test-area" class="hidden">
+            <h2>Drag the cards to the correct category</h2>
+            <div id="source-cards" class="card-container"></div>
+
+            <div class="drop-zones-container">
+                <div id="system-zone" class="drop-zone" data-type="System Software">
+                    <h3>System Software</h3>
+                </div>
+                <div id="app-zone" class="drop-zone" data-type="Application Software">
+                    <h3>Application Software</h3>
+                </div>
+            </div>
+
+            <button id="check-btn" class="hidden"><i class="bi bi-graph-up"></i>Result</button>
+            <button id="restart-btn" class="hidden">Retake Test</button>
+            <div id="results"></div>
+            <div class="btn">
+                <button class="back-btn" id="back-btn" title="Back">
+                    <i class="bi bi-skip-backward-fill"></i> Back
+                </button>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="learned-page" class="hidden container">
+        <h2>Learned Cards</h2>
+        <p>These cards have already been learned and are not used in the test. You can return them to learning at any time.</p>
+        <div id="learned-cards" class="card-container"></div>
+    </div>
+    <div class="show-learned-btn">
+    <button id="show-learned-btn" class="show-learned-btn">Show learned</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
