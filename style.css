@@ -666,3 +666,63 @@ button {
     font-size: 34px;
   }
 }
+
+.contact-section {
+  margin: 20px 0;
+}
+
+.contact-section > .container {
+  width: 100%;
+  max-width: 1160px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.contact-section .form-contact {
+  width: 100%;
+  max-width: 760px;
+  margin: 0;
+}
+
+.contact-section .form-contact .form-control {
+  margin-bottom: 22px;
+}
+
+.contact-section .form-contact textarea.form-control {
+  height: 180px;
+}
+
+.contact-section .form-contact .boxed-btn {
+  width: 100%;
+  min-height: 52px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 992px) {
+  .contact-section .col-lg-8 {
+    flex: 0 0 70%;
+    max-width: 70%;
+  }
+
+  .contact-section .col-lg-4 {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+}
+
+@media (max-width: 991px) {
+  .contact-section .col-lg-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-section {
+    margin: 0;
+  }
+
+  .contact-section .form-contact {
+    max-width: none;
+  }
+}
