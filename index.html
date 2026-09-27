@@ -491,10 +491,24 @@
             const rightBtn = gallery.querySelector('.arrow.right'); // кнопка вправо
             let index = 0; // текущий слайд
 
+            function updateSliderHeight() {
+                const activeSlide = slides[index];
+                if (activeSlide) {
+                    track.parentElement.style.height = `${activeSlide.offsetHeight}px`;
+                }
+            }
+
             // Функция обновления позиции
             function updateSlide() {
             track.style.transform = `translateX(-${index * 100}%)`;
+            updateSliderHeight();
             }
+
+            track.querySelectorAll('img').forEach(image => {
+                image.addEventListener('load', updateSliderHeight);
+            });
+
+            updateSliderHeight();
 
             // Нажатие стрелки вправо
             rightBtn.addEventListener('click', () => {
