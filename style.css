@@ -294,6 +294,10 @@ h3 {
   color: #DB9A64 !important;
 }
 
+.project-site-link {
+  display: none;
+}
+
 .footer {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/banner.jpg) center center / cover no-repeat;
   background-attachment: fixed;
@@ -602,6 +606,25 @@ button {
     overflow-wrap: anywhere;
   }
 
+  .gallery_heading:has(.project-site-link) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px 16px;
+    flex-wrap: wrap;
+  }
+
+  .gallery_heading:has(.project-site-link) > a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .gallery_heading .project-site-link {
+    white-space: nowrap;
+    font-size: 15px;
+  }
+
   .footer_top {
     padding: 45px 0 55px;
   }
@@ -665,6 +688,7 @@ button {
     bottom: 18px;
     font-size: 34px;
   }
+
 }
 
 .contact-section {
